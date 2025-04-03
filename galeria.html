@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galería HomeDomo X</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css">
+</head>
+<body class="bg-gray-900 text-white">
+
+    <div class="container mx-auto p-6">
+        <h2 class="text-4xl font-bold text-center mb-6">Galería HomeDomo X</h2>
+
+        <!-- Carrusel -->
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <!-- Imagen 1 -->
+                <div class="swiper-slide">
+                    <img src="IMAGES/GALERIA (1).jpeg" alt="Imagen 1" class="rounded-xl w-full shadow-lg">
+                </div>
+                <!-- Imagen 2 -->
+                <div class="swiper-slide">
+                    <img src="IMAGES/GALERIA (2).jpeg" alt="Imagen 2" class="rounded-xl w-full shadow-lg">
+                </div>
+                <!-- Imagen 3 -->
+                <div class="swiper-slide">
+                    <img src="IMAGES/GALERIA (3).jpeg" alt="Imagen 3" class="rounded-xl w-full shadow-lg">
+                </div>
+                <div class="swiper-slide">
+                    <img src="IMAGES/GALERIA (4).jpeg" alt="Imagen 4" class="rounded-xl w-full shadow-lg">
+                </div>
+                <!-- Video de YouTube -->
+              
+            </div>
+
+            <!-- Botones de navegación -->
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-pagination"></div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+    <script>
+        const swiper = new Swiper('.swiper-container', {
+            loop: true,
+            autoplay: { delay: 3000 },
+            pagination: { el: '.swiper-pagination', clickable: true },
+            navigation: { nextEl: '.swiper-button-next', prevEl: '.swiper-button-prev' },
+        });
+    </script>
+    <a href="index.html" class="text-blue-500 hover:underline">Volver a la página principal</a>
+
+
+</body>
+</html>
