@@ -1,0 +1,370 @@
+/* styles.css */
+
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Rajdhani:wght@300;500&display=swap');
+
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 60;
+    padding: 40;
+    background: url('https://img.freepik.com/fotos-premium/fondo-guia-tecnologia-moderna-azul-14_769134-338.jpg?semt=ais_hybrid') no-repeat center center fixed;
+    background-size: cover;
+    color: #ffffff;
+}
+
+header {
+    background: rgba(0, 0, 50, 0.9);
+    color: white;
+    padding: 5px;
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+nav ul {
+    list-style: lower-alpha;
+    padding: 0;
+    text-align: center;
+    background: rgba(0, 0, 100, 0.8);
+    margin: 30;
+    padding: 20px 0;
+}
+
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+/* Contenedor principal del carrusel */
+.carousel-container {
+    position: relative;
+    width: 80%;
+    margin: 0 auto;
+    overflow: hidden; /* Oculta las imágenes fuera de la vista */
+    background-color: #000;
+    border-radius: 15px; /* Bordes redondeados */
+}
+
+/* Contenedor de las imágenes del carrusel */
+.carousel {
+    display: flex;
+    transition: transform 0.5s ease-in-out; /* Transición suave para el movimiento */
+}
+
+/* Estilos para cada imagen */
+.carousel-item {
+    min-width: 100%;
+    box-sizing: border-box;
+    text-align: center;
+    position: relative;
+}
+
+.carousel-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+}
+
+/* Estilos para el texto en las imágenes */
+.carousel-item p {
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    right: 0;
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+/* Estilos para los botones de navegación */
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    font-size: 2rem;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    transform: translateY(-50%);
+    border-radius: 50%;
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #00eaff;
+    text-decoration: none;
+    font-weight: bold;
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 18px;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #ff007b;
+}
+
+section {
+    padding: 30px;
+    margin: 30px auto;
+    background: rgba(0, 0, 50, 0.9);
+    border-radius: 12px;
+    box-shadow: 0 0 15px rgba(0, 255, 255, 0.5);
+    width: 80%;
+    text-align: center;
+}
+
+h1, h2 {
+    text-align: center;
+    color: #00eaff;
+    text-transform: uppercase;
+}
+
+h2 {
+    font-family: 'Rajdhani', sans-serif;
+    font-weight: 500;
+}
+
+.gallery img {
+    display: block;
+    max-width: 100%;
+    margin: 20px auto;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 255, 255, 0.7);
+}
+
+footer {
+    text-align: center;
+    padding: 15px;
+    background: rgba(0, 0, 50, 0.9);
+    color: white;
+    font-size: 14px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    margin-top: 30px;
+}
+
+.card:nth-child(1) { /* Primera tarjeta (ventajas) */
+    background: url('ruta-de-ventajas.jpg') no-repeat center center;
+    background-size: cover;
+    color: #fff; /* Para que el texto sea legible */
+}
+
+.card:nth-child(2) { /* Segunda tarjeta (desventajas) */
+    background: url('ruta-de-desventajas.jpg') no-repeat center center;
+    background-size: cover;
+    color: #fff;
+}
+
+/* Botones */
+button {
+    font-size: 16px;
+    padding: 10px 20px;
+    margin: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button:hover {
+    background-color: #4CAF50;
+    transform: scale(1.05);
+}
+
+button#modoOscuro {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: #000;
+    color: #fff;
+}
+
+button#volverArriba {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #000;
+    color: #fff;
+}
+
+button#playMusic {
+    background-color: #007BFF;
+    color: #fff;
+}
+
+button#playMusic:hover {
+    background-color: #0056b3;
+}
+
+button#compartir {
+    background-color: #FF5722;
+    color: white;
+}
+
+/* Chatbot */
+#chatbot {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    background-color: #f1f1f1;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: none;
+}
+
+#chatContent {
+    display: none;
+    padding: 10px;
+    background-color: #007BFF;
+    color: white;
+    border-radius: 5px;
+    text-align: center;
+}
+
+#chatContent.active {
+    display: block;
+}
+
+#toggleChat {
+    background-color: #008CBA;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Preloader */
+#preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    visibility: visible;
+    transition: visibility 1s ease-in-out;
+}
+
+
+
+/* Partículas */
+#particles-js {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+/* Estilo básico para los elementos animados */
+[data-aos] {
+    opacity: 0; /* Los elementos inician invisibles */
+    transition: opacity 0.6s ease-out; /* Transición suave para la aparición */
+}
+
+/* Opcional: Puedes agregar un borde o sombra para que se vean más destacadas */
+[data-aos="fade-up"] {
+    border: 2px solid #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Ejemplo para ajustar la posición de los elementos */
+[data-aos="fade-up"] {
+    transform: translateY(20px); /* Los elementos se moverán un poco hacia arriba al ser visibles */
+}
+
+/* Otros estilos personalizados para efectos de animación */
+[data-aos="fade-left"], [data-aos="fade-right"] {
+    padding: 10px;
+    margin: 10px;
+    background-color: #f0f0f0;
+    border-radius: 5px;
+}
+
+/* También puedes añadir transiciones a los colores o a otros efectos visuales */
+[data-aos="fade-up"]:hover {
+    background-color: rgba(0, 0, 0, 0.1); /* Efecto al pasar el mouse */
+    transform: scale(1.05); /* Hacer un pequeño zoom al pasar el mouse */
+}
+ 
+/* Estilo del botón de compartir */
+.btn-compartir {
+    padding: 15px 25px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.3s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.btn-compartir:hover {
+    background-color: #45a049;
+    transform: translateY(-3px);
+}
+
+.btn-compartir:active {
+    background-color: #388e3c;
+    transform: translateY(0);
+}
+
+#compartir {
+    display: block;
+    margin: 20px auto;
+    padding: 15px 20px;
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    font-size: 18px;
+    border-radius: 25px;
+    transition: background-color 0.3s ease;
+}
+
+#compartir:hover {
+    background-color: #45a049;
+}
+
+#compartir:active {
+    background-color: #388e3c;
+}
+
+
+
